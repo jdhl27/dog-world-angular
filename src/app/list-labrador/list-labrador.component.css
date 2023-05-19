@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 22px;
+  color: #616161;
+}
+
+.contenedor-image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 37px 0;
+}
+
+.image {
+  width: 20%;
+  margin: 17px;
+  border-radius: 19px;
+  /* object-fit: cover; */
+  border: 1px solid white;
+  padding: 12px;
+}

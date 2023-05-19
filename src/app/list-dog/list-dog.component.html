@@ -1,0 +1,36 @@
+<h1>{{ title }}</h1>
+<h3>{{ description }}</h3>
+
+<div class="collage-container">
+  <mat-grid-list cols="3" rowHeight="3:4" class="mat-grid-list-center">
+    <mat-grid-tile
+      *ngFor="let dog of dogs"
+      class="image-tile"
+      [colspan]="1"
+      [rowspan]="1"
+    >
+      <div
+        class="image-container"
+        (mouseenter)="onMouseOver()"
+        (mouseleave)="onMouseLeave()"
+      >
+        <img
+          src="{{ dog.image }}"
+          alt="{{ dog.name }}"
+          class="image"
+          style="object-fit: contain"
+        />
+        <div class="overlay">
+          <div class="text">{{ dog.name }}</div>
+          <button
+            mat-icon-button
+            class="favorite-button"
+            (click)="toggleFavorite(dog)"
+          >
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

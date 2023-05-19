@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+<h3>{{ description }}</h3>
+
+<div style="display: flex; justify-content: center">
+  <img
+    src="https://p4.wallpaperbetter.com/wallpaper/339/20/921/dog-labrador-pet-retriever-wallpaper-preview.jpg"
+    alt=""
+    style="display: flex; justify-content: center; filter: grayscale(100%)"
+  />
+</div>
+<div class="contenedor-image">
+  <img
+    *ngFor="let dog of dogs"
+    src="{{ dog.image }}"
+    alt="{{ dog.name }}"
+    class="image"
+  />
+</div>
